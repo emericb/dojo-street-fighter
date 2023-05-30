@@ -34,8 +34,8 @@ Nous avons besoin d'une page de combat qui affichera les informations suivantes 
 
 Lorsque le combat est lancé (au clic sur le bouton d'attaque), le personage attaquant lance la méthode attaque:
 
-- qui prend en compte son attaque et effectue un random entre 0,5 et 1,5 \* le nombre d'attaque du personnage.
-- Une fois l'attaque paramètrée, il faudra également prendre en compte la défense du personnage visé. récupère la défense du personnage visé, divise là par 100 et la multiplie par l'attaque du personnage attaquant.
+- qui prend en compte son attaque et la précision d'éxécution du combattant (effectue un random entre 0,5 et 1,5 \* le nombre d'attaque du personnage).
+- Une fois l'attaque paramètrée, il faudra également prendre en compte la défense du personnage visé et la capacité à éxécuter la défense au bon tming. (récupère la défense du personnage visé, effectue un random entre 0,5 et 1,5 (encore? refactor ?) et soustrait la defense à l'attaque du personnage attaquant).
 - Cette valeur est ensuite soustraite à la vie du personnage attaqué. Le personnage attaqué lance ensuite automatiquement la même méthode attaque. Tu peux répéter le clic d'attaque pour lancer une nouvelle salve de combat et ce jusqu'à ce qu'un de sparticipants n'est plus de PV (ici on accueille que les plus grand champions, l'abandon n'est pas une option!).
 
 ### Quatrième étape
@@ -45,3 +45,11 @@ Lorsqu'un personnage n'a plus de vie, le combat est terminé et un message de vi
 ### Bonus :
 
 Lorsqu'un combat se termine, je store le résultat du combat dans un tableau de ranking. Ce tableau est affiché sur la page d'accueil. Afin de conserver les informations des combats précédents, je stocke les informations dans le local storage.
+
+### Bonus EX :
+
+Crée dans le modèle une classe Combat qui prendra en paramètre deux combattants. Cette classe permettra de gérer le combat et de lancer les attaques. Elle devra également permettre de stocker les résultats des combats dans le local storage.
+
+### Bonus EX + ALPHA :
+
+Crée dans les modèles une classe Budokai qui prendront en paramètre un tableau de combattants et un nom de tournoi. Cette classe permettra de gérer le tournoi et de lancer les combats. Elle devra également permettre de stocker les résultats des combats dans le local storage.
