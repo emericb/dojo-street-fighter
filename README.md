@@ -29,6 +29,7 @@ Nous avons besoin d'une page de combat qui affichera les informations suivantes 
 - Leur vie respective
 - leur image afin de les représenter
 - Un bouton pour attaquer et lancer la première salve de combat
+- Un nombre de vie maximum égal au même nombre pour chaque combattant (100 par exemple)
 
 ### Troisième étape
 
