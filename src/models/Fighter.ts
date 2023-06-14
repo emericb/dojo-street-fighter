@@ -1,4 +1,4 @@
-class Fighter {
+export class Fighter {
   private _name: string;
   private _health: number;
   private _power: number;
@@ -18,4 +18,25 @@ class Fighter {
     this._defense = defense;
     this._picture = picture;
   }
+
+
+get name(): string {
+  return this._name;
+}
+
+get health(): number {
+  return this._health;
+}
+
+get power(): number {
+  return this._power;
+}
+
+get defense(): number {
+  return this._defense;
+}
+
+get picture(): string {
+  return this._picture;
+}
 }
